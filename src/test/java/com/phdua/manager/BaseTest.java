@@ -22,10 +22,10 @@ public class BaseTest {
 
     @Before
     public void init() {
-        System.out.println("开始测试-----------------");
+        System.out.println("-------------开始测试-----------------");
     }
     @After
     public void after() {
-        System.out.println("结束测试-----------------");
+        System.out.println("-------------结束测试-----------------");
     }
 }
