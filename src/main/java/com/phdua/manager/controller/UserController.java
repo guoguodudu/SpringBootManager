@@ -1,5 +1,7 @@
-package com.phdua.manager.Controller;
+package com.phdua.manager.controller;
 
+import com.phdua.manager.service.user.IUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user/")
 public class UserController {
 
+    @Autowired
+    private IUserService iUserService;
     @RequestMapping("test")
     public  String UserTest(){
-        return "123";
+        return iUserService.getUserList().toString();
     }
 }
