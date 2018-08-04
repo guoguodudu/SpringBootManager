@@ -23,6 +23,8 @@ public class MQ extends BaseTest {
         System.out.println("123");
         String kk=null;
         if(!StringUtils.isEmpty(kk))System.out.println("123");
+        System.out.println("123");
+        System.out.println("123");
     }
 
 
