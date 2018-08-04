@@ -3,7 +3,7 @@ package com.phdua.manager.service.impl.user;
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
 import com.phdua.manager.BaseTest;
-import com.phdua.manager.domain.MsgClient;
+import com.phdua.manager.exportandimport.domain.MsgClient;
 import com.phdua.manager.service.user.IUserService;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Test;
@@ -42,16 +42,13 @@ public class UserServiceImplTest extends BaseTest{
         Workbook workbook = null;
         Date start = new Date();
         ExportParams params = new ExportParams("大数据测试", "测试");
-        for (int i = 0; i < 10000000; i++) {  //一百万数据量
+        for (int i = 0; i < 50000000; i++) {  //一百万数据量
             MsgClient client = new MsgClient();
             client.setBirthday(new Date());
             client.setName("小明" + i);
             client.setId("1"+i);
             list.add(client);
             client.setRemark("测试" + i);
-            MsgClientGroup group = new MsgClientGroup();
-            group.setGroupName("测试" + i);
-            client.setGroup(group);
             list.add(client);
             if(list.size() == 10000){
                 workbook = ExcelExportUtil.exportBigExcel(params, MsgClient.class, list);
@@ -74,7 +71,7 @@ public class UserServiceImplTest extends BaseTest{
         List<MsgClient> list = new ArrayList<MsgClient>();
         Workbook workbook = null;
         ExportParams params = new ExportParams("大数据测试", "测试");
-        for (int i = 0; i < 10000000; i++) {  //一百万数据量
+        for (int i = 0; i < 5000000; i++) {  //一百万数据量
             MsgClient client = new MsgClient();
             client.setBirthday(new Date());
             client.setName("小明" + i);

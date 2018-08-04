@@ -1,4 +1,4 @@
-package com.phdua.manager.domain;
+package com.phdua.manager.exportandimport.domain;
 
 import cn.afterturn.easypoi.excel.annotation.Excel;
 import lombok.Data;
