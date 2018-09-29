@@ -19,10 +19,17 @@ public class UserController {
 
     @Autowired
     private IUserService iUserService;
+
     @RequestMapping("test")
     public  String UserTest(){
         return iUserService.getUserList().toString();
     }
+
+    @RequestMapping("redis")
+    public  String UserTestRedis(){
+        return iUserService.getUserList().toString();
+    }
+
 
 
 }

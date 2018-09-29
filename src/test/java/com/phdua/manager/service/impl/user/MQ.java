@@ -8,6 +8,9 @@ import com.rabbitmq.client.ConnectionFactory;
 import org.junit.Test;
 import org.springframework.util.StringUtils;
 
+import java.util.Date;
+import java.util.UUID;
+
 /**
  * 〈一句话功能简述〉<br>
  * 〈〉
@@ -20,11 +23,9 @@ public class MQ extends BaseTest {
 
     @Test
     public void mqtest()  {
-        System.out.println("123");
-        String kk=null;
-        if(!StringUtils.isEmpty(kk))System.out.println("123");
-        System.out.println("123");
-        System.out.println("123");
+        StringBuffer code=new StringBuffer();
+        code.append("P").append(Math.abs(UUID.randomUUID().getMostSignificantBits()));
+        System.out.println("code = " + code);
     }
 
 
