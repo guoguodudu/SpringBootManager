@@ -8,8 +8,5 @@ public class test {
 
         AbstractFactory abstractFactory= new HuaWeiFactory();
 
-        abstractFactory.getMouse().getMouse();
-
-        abstractFactory.getKeyboard().getKeyboard();
     }
 }
