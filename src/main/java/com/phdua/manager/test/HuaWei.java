@@ -9,4 +9,6 @@ public class HuaWei {
 
 
 
+
+    private String ll;
 }
