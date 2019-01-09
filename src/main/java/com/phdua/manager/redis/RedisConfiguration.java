@@ -26,7 +26,7 @@ import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
 @ConditionalOnProperty(
-        name = {"spring.fanlai.redis.enabled"},
+        name = {"synchronize"},
         havingValue = "true"
 )
 public class RedisConfiguration {
