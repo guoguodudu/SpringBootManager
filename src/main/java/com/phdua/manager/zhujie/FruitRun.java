@@ -1,8 +1,12 @@
 package com.phdua.manager.zhujie;
 
-    public class FruitRun {
-        public static void main(String[] args) {
-            FruitInfoUtil.getFruitInfo(Apple.class);
+import static com.phdua.manager.zhujie.FruitInfoUtil.getFruitInfo;
 
+public class FruitRun {
+        public static void main(String[] args) {
+
+            Class apple=FruitInfoUtil.getFruitInfo(Apple.class);
+            Apple apple1=new Apple();
+            System.out.println("apple = " +apple);
         }
 }
