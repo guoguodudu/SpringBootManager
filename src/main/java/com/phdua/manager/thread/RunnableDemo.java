@@ -6,6 +6,8 @@ public class RunnableDemo implements java.lang.Runnable {
 
         for (int i = 1; i < 5; i++) {
             System.out.println("i = " + i);
+            System.out.println(Thread.currentThread().getName());
+
         }
     }
 }
