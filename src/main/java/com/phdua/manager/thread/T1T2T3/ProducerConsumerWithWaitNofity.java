@@ -9,15 +9,15 @@ public class ProducerConsumerWithWaitNofity {
         ProducerThread p3 = new ProducerThread(resource);
         //消费者线程
         ConsumerThread c1 = new ConsumerThread(resource);
-        //ConsumerThread c2 = new ConsumerThread(resource);
-        //ConsumerThread c3 = new ConsumerThread(resource);
+        ConsumerThread c2 = new ConsumerThread(resource);
+        ConsumerThread c3 = new ConsumerThread(resource);
 
         p1.start();
         p2.start();
         p3.start();
         c1.start();
-        //c2.start();
-        //c3.start();
+        c2.start();
+       // c3.start();
     }
 
 

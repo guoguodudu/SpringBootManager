@@ -12,11 +12,10 @@ import static java.lang.Thread.MIN_PRIORITY;
 public class Demo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-     /*   ThreadDemo threadDemo=new ThreadDemo("sdljf");
+        ThreadDemo threadDemo=new ThreadDemo("one");
         threadDemo.start();
-        ThreadDemo threadDemo2=new ThreadDemo("sdljf");
+        ThreadDemo threadDemo2=new ThreadDemo("two");
         threadDemo2.start();
-        */
         RunnableDemo runnableDemo=new RunnableDemo();
         Thread thread=new Thread(runnableDemo);
         Thread thread2=new Thread(runnableDemo);
@@ -25,8 +24,8 @@ public class Demo {
         thread2.setPriority(MIN_PRIORITY);
         thread3.setPriority(MAX_PRIORITY);
         thread.start();
-        thread2.start();
-        thread3.start();
+  /*        thread2.start();
+        thread3.start();*/
 
       /*  RunnableDemo runnableDemo=new RunnableDemo();
         new Thread(runnableDemo).start();
