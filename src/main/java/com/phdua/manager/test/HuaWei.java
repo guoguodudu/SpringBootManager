@@ -7,8 +7,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class HuaWei {
 
-
-
-
     private String ll;
+
+
+    public String getLl() {
+        return ll;
+    }
 }
