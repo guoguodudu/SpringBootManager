@@ -5,6 +5,7 @@ import cn.afterturn.easypoi.excel.entity.ExportParams;
 import com.phdua.manager.BaseTest;
 import com.phdua.manager.exportandimport.domain.MsgClient;
 import com.phdua.manager.service.user.IUserService;
+import com.phdua.manager.service.user.IUserTransactionalService;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,14 +30,29 @@ public class UserServiceImplTest extends BaseTest{
     @Autowired
     private IUserService iUserService;
 
+    @Autowired
+     private IUserTransactionalService iUserTransactionalService;
 
-
-    @Test
+ /*   @Test
     public void getUserList() throws Exception {
         System.out.println("true = " + iUserService.getUserList().get(0).toString());
-    }
+    }*/
+
 
     @Test
+    public void insertUserList() throws Exception {
+      //  System.out.println("insert true = " + iUserService.insertUser());
+        System.out.println("update true = " + iUserTransactionalService.updateInsertUser());
+    }
+
+   /* @Test
+    public void insertUserList() throws Exception {
+        System.out.println("insert true = " + iUserService.insertUser());
+        System.out.println("update true = " + iUserService.updateUser());
+    }*/
+
+
+   // @Test
     public void export() throws IOException {
         List<MsgClient> list = new ArrayList<MsgClient>();
         Workbook workbook = null;
@@ -66,7 +82,7 @@ public class UserServiceImplTest extends BaseTest{
         fos.close();
     }
 
-    @Test
+   // @Test
     public void  export2() throws IOException {
         List<MsgClient> list = new ArrayList<MsgClient>();
         Workbook workbook = null;

@@ -14,4 +14,11 @@ import java.util.List;
  */
 public interface IUserService {
     List<User>  getUserList() ;
+
+    Boolean insertUser();
+
+    Boolean updateUser();
+
+    Boolean updateInsertUser();
+
 }
