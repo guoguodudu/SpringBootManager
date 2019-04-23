@@ -44,7 +44,7 @@ public class ThreadPoolExample {
             }
         });
         try {
-            System.out.println("运行结果：" + result.get());
+            System.out.println("运行结果：" + result.get().toString());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
