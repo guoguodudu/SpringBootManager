@@ -85,7 +85,7 @@ public class DistributedLock {
             while (true) {
                 // 监视lock，准备开始事务
                 conn.watch(lockKey);
-                // 通过前面返回的value值判断是不是该锁，若是该锁，则删除，释放锁
+                //  ，若是该锁，则删除，释放锁
                 if (identifier.equals(conn.get(lockKey))) {
                     Transaction transaction = conn.multi();
                     transaction.del(lockKey);
