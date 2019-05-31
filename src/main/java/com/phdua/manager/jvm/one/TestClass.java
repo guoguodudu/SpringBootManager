@@ -2,14 +2,42 @@ package com.phdua.manager.jvm.one;
 
 public class TestClass {
 
-    private int m;
+    private  int x;;
 
-    public  int inc(){
-        return m+1;
+    public int inc() {
+
+        try {
+            x = 1;
+            return x;
+        } catch (Exception e) {
+            x = 2;
+            return x;
+        } finally {
+            x = 3;
+        }
+    }
+
+    public int getX(){
+
+        Integer[] kk=new Integer[10];
+
+        int[] temp={1,2};
+
+        int[] temp2=new int[10];
+
+        Integer[][] tmp=new Integer[1][2];
+
+        return x;
     }
 
     public static void main(String[] args) {
-        System.out.println("args = " + args);
+        int a[] = new int[3];
+
+        for (int i = 0 ; i < 3;i++) {
+
+            a[i] = i;
+        }
+        System.out.println("new String(a) = " +a.length);
     }
 
 }
